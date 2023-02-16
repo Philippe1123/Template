@@ -1,0 +1,84 @@
+% Copyright 2014
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+% -----------------------------------------------------------------------------
+% Options
+% -----------------------------------------------------------------------------
+
+
+\newif\ifbeamer@background
+\newif\ifbeamer@nologo
+\newif\ifbeamer@nonav
+\newif\ifbeamer@framenumber
+\newif\ifbeamer@totalframenumber
+
+
+
+% Set defaults
+\beamer@backgroundfalse
+\beamer@nologofalse
+\beamer@framenumberfalse
+\beamer@totalframenumberfalse
+\beamer@nonavfalse
+
+\DeclareOptionBeamer{background}{\beamer@backgroundtrue}
+\DeclareOptionBeamer{nologo}{\beamer@nologotrue}
+\DeclareOptionBeamer{nonav}{\beamer@nonavtrue}
+\DeclareOptionBeamer{framenumber}{\beamer@framenumbertrue}
+\DeclareOptionBeamer{totalframenumber}{\beamer@totalframenumbertrue}
+
+\ProcessOptionsBeamer
+% -----------------------------------------------------------------------------
+% Dependencies
+% -----------------------------------------------------------------------------
+\RequirePackage{calc}
+\RequirePackage{etoolbox}
+
+\mode<presentation>
+
+% 
+% Prepare and load artwork
+%
+\newlength{\logo@width}
+\newlength{\logoKMS@width}
+\newlength{\sleutel@width}
+\newlength{\sleutelback@width}
+\newlength{\imagesKMS@width}
+\newlength{\imagesKMS@height}
+
+%
+\setlength{\logo@width}{4.cm}
+\setlength{\logoKMS@width}{2.5cm}
+\setlength{\sleutel@width}{2.5cm}
+\setlength{\sleutelback@width}{5cm}
+\setlength{\imagesKMS@width}{14cm}
+\setlength{\imagesKMS@height}{9.6cm}
+%
+%\pgfdeclareimage[width=\logo@width]{KULeuvenLogo}{images/kuleuven_CMYK_logo.pdf}
+\pgfdeclareimage[width=\logo@width]{defence}{images_KMS/image2.png}
+\pgfdeclareimage[width=\logoKMS@width]{KMS}{images_KMS/image3-0.png}
+%\pgfdeclareimage[width=\sleutel@width]{KULeuvenSleutel}{images/sleutel.png}
+%\pgfdeclareimage[width=\sleutelback@width]{KULeuvenSleutelLicht}{images/sleutelLicht.png}
+%\pgfdeclareimage[width=\sleutelback@width]{KULeuvenSleutelDonker}{images/sleutelDonker.png}
+\pgfdeclareimage[width=\imagesKMS@width,height=\imagesKMS@height]{imagesKMS}{images_KMS/image1.png}
+
+%
+% Apply the themes
+%
+\useinnertheme{KMS}
+\usefonttheme {KMS}
+\usecolortheme{KMS}
+\useoutertheme{KMS}
+
+
+
+\ifbeamer@nonav%
+\setbeamertemplate{navigation symbols}{}
+\fi 
+
+
+\mode<all>

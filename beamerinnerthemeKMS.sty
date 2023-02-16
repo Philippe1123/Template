@@ -1,0 +1,130 @@
+% Copyright 2014
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+
+
+\setbeamertemplate{blocks}[square]
+
+\setbeamertemplate{items}[circle]
+
+\RequirePackage{tikz}
+
+\newlength{\fillout@height@fraction}
+\newlength{\fillout@height@bottom}
+
+\newlength{\titlepage@titleitems@xfraction}
+\newlength{\titlepage@titleitems@yfraction}
+%\newlength{\titlepage@title@xfraction}
+%\newlength{\titlepage@subtitle@xfraction}
+
+
+% Height of paper in the upstream presentation is 19.04cm,
+% while height of the fillout is 17.3cm,  which corresponds to 0.908 ~ 0.91
+\setlength{\fillout@height@fraction}{0.91\paperheight}
+\setlength{\fillout@height@bottom}{0\paperheight}
+
+\setlength{\titlepage@titleitems@xfraction}{0.2\paperwidth}
+\setlength{\titlepage@titleitems@yfraction}{0.5\paperheight}
+
+
+
+
+
+% Title page
+\defbeamertemplate*{title page}{KMS title page}[2][]
+{ 
+
+
+%\begin{tikzpicture}
+%	\useasboundingbox (0.5,10.) rectangle(\paperwidth,\paperheight);
+%	\fill[KMSFill_Front] (0.5,9) rectangle (0.0001\paperwidth,0.9\paperheight);
+
+%\end{tikzpicture}
+
+\begin{tikzpicture}
+
+	\useasboundingbox (0.8,0) rectangle(\paperwidth,\paperheight);
+	\fill[KMSFill_Front] (-0.01,7.9) rectangle (0.05\paperwidth,0.83\paperheight);
+       
+	
+	\useasboundingbox (0.75,-2.2) rectangle(\paperwidth,\paperheight);
+	\fill[KMSFill_Front] (-0.2,0.8) rectangle (0.000001\paperwidth,0.15\paperheight);
+		\node (titlebox) [anchor=west] at (0.0\paperwidth, 0.13\paperheight) {%
+		\begin{minipage}{0.7\paperwidth}
+
+		\begin{beamercolorbox}{title}
+
+      			\usebeamerfont{title}\inserttitle
+		\end{beamercolorbox}
+		\end{minipage}
+	};
+	
+	\useasboundingbox (0,0) rectangle(\paperwidth,\paperheight);
+	\node (titlebox1) [anchor=north] at (0.35\paperwidth, 0.9\paperheight) {%
+		\begin{minipage}{0.7\paperwidth}
+		\begin{beamercolorbox}{author}
+      			\usebeamerfont{author}\insertauthor
+		\end{beamercolorbox}
+		%		
+		
+		\end{minipage}
+	};
+	
+		\useasboundingbox (0,0) rectangle(\paperwidth,\paperheight);
+	\node (titlebox1) [anchor=north] at (0.35\paperwidth, 0.95\paperheight) {%
+		\begin{minipage}{0.7\paperwidth}
+		\begin{beamercolorbox}{author}
+      			\usebeamerfont{author}{Royal Military Academy}
+		\end{beamercolorbox}
+		%		
+		
+		\end{minipage}
+	};
+	
+		\useasboundingbox (0,0) rectangle(\paperwidth,\paperheight);
+		\node (titlebox2) [anchor=north] at (0.34\paperwidth, 0.8\paperheight) {%
+		\begin{minipage}{0.7\paperwidth}
+		
+		\begin{beamercolorbox}{date}
+			\vspace{1cm}
+      			\usebeamerfont{date}\insertdate\par
+		\end{beamercolorbox}
+		\end{minipage}
+	};
+	
+	
+%	\node (sleutel) [anchor=east] at (\titlepage@titleitems@xfraction, \titlepage@titleitems@yfraction) {\pgfuseimage{KMSSleutel}}; TITLE page
+\end{tikzpicture}
+
+}
+\setbeamertemplate{background}{
+\begin{tikzpicture}
+	\useasboundingbox (0,0) rectangle(\paperwidth,\paperheight);
+	\ifnumgreater{\thepage}{1}{%
+		\relax
+		% Background for a regular frame
+		\fill[white,opacity=1] (0,0) rectangle(\paperwidth,\paperheight);
+		\ifbeamer@background
+			\node[anchor=south west,inner sep=0] at (0,0.0\paperwidth) {\pgfuseimage{imagesKMS}};
+		\fi
+	}{%
+		% Variations on title page
+		\relax
+
+		\node[anchor=south west,inner sep=0] at (0,0.0\paperwidth) {\pgfuseimage{imagesKMS}};
+%		\fill[color=KMSFill] (0,\fillout@height@bottom) rectangle (\paperwidth,\fillout@height@fraction); 
+		\node[anchor=east,inner sep=0] at (0.99\paperwidth,\fillout@height@fraction) {\pgfuseimage{defence}}; 
+		\node[anchor=south east,inner sep=0] at (0.95\paperwidth,0.05\paperheight) {\pgfuseimage{KMS}}; 
+
+   	}
+\end{tikzpicture}
+}
+
+
+
+\mode<all>

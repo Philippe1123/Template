@@ -1,0 +1,67 @@
+% Copyright 
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\mode<presentation>
+% -----------------------------------------------------------------------------
+% Color components of the KMS logo
+% -----------------------------------------------------------------------------
+% As read from the EPS file.
+\definecolor{KMSLogoBlue}{RGB}{18,60,117}
+\definecolor{KMSLogoLightBlue}{RGB}{106,194,238}
+
+% -----------------------------------------------------------------------------
+% Color components of the template.
+% -----------------------------------------------------------------------------
+% Unfortunately, the RGB components as read from the PPTX template are somewhat different from these in the KMS logo...
+\definecolor{KMSBodyText}{RGB}{26,70,82}
+\definecolor{KMSHeaderText}{RGB}{0,137,144}
+%\definecolor{KMSFill}{RGB}{17,110,138}
+\definecolor{KMSFill}{RGB}{0,0,100}
+\definecolor{KMSFill_Front}{RGB}{26,70,82}
+% TODO: the PPT presentation defines a gradient of the filling color.
+\definecolor{KMSTitle}{RGB}{26,70,82} 	% white 
+\definecolor{KMSMath}{RGB}{26,70,82} 			% black 
+\definecolor{KMSAlert}{RGB}{255,0,0} 		% plain simple red 
+
+% -----------------------------------------------------------------------------
+% 
+% -----------------------------------------------------------------------------
+\setbeamercolor{normal text}{fg=KMSBodyText}		% body text
+%\setbeamercolor{structure}{fg=KMSBodyText,bg=KMSFill}
+\setbeamercolor{frametitle}{fg=KMSHeaderText}	% frame title
+\setbeamercolor{math text displayed}{fg=black}      	% equations in displaystyle (inlined math inherits from normal text)
+\setbeamercolor{section in toc}{fg=KMSFill_Front}		%toc (section) color
+\setbeamercolor{frame number in foot}{fg=KMSBodyText}%
+\setbeamercolor{frame number in head}{fg=KMSBodyText}%
+\setbeamercolor{alerted text}{fg=KMSAlert}  % alert color
+% -----------------------------------------------------------------------------
+% Elements of the title page
+% -----------------------------------------------------------------------------
+\setbeamercolor{title}{fg=KMSTitle}
+\setbeamercolor{subtitle}{fg=KMSTitle}
+\setbeamercolor{author}{fg=KMSTitle}
+\setbeamercolor{institute}{fg=KMSTitle}
+\setbeamercolor{date}{fg=KMSTitle}
+
+% -----------------------------------------------------------------------------
+% Itemize and enumerate: all in the same color as the body text.
+% -----------------------------------------------------------------------------
+\setbeamercolor{all items}{fg=KMSBodyText}
+\setbeamercolor{item}{fg=KMSBodyText}
+
+% -----------------------------------------------------------------------------
+% Blocks
+% -----------------------------------------------------------------------------
+\setbeamercolor{block title}{fg=KMSTitle,bg=KMSBodyText}
+\setbeamercolor{block title alerted}{use=block title,fg=KMSAlert}
+\setbeamercolor{block title example}{bg=KMSHeaderText,fg=KMSBodyText}
+\setbeamercolor{block body}{fg=KMSTitle,bg=KMSFill}
+\setbeamercolor{block body alerted}{use=block body}
+\setbeamercolor{block body example}{use=block body}
+
+
+\mode<all>
