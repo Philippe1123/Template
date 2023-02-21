@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.6)  13 FEB 2023 12:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.6)  21 FEB 2023 09:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -979,20 +979,21 @@ Package rerunfilecheck Info: File `KMSStijl-example.out' has not changed.
 Here is how much of TeX's memory you used:
  24868 strings out of 480204
  493856 string characters out of 5895011
- 734124 words of memory out of 5000000
+ 734275 words of memory out of 5000000
  42290 multiletter control sequences out of 15000+600000
  482071 words of font info for 57 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  101i,16n,111p,423b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss2488.
-600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1
-095.600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-css0800.600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecsx1200.600pk>
-Output written on KMSStijl-example.pdf (5 pages, 215233 bytes).
+600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0
+600.600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+css1095.600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecss0800.600pk> </home/philippe/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecsx1200.600pk>
+Output written on KMSStijl-example.pdf (5 pages, 216821 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
